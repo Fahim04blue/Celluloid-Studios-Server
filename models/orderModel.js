@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 
 const orderSchema = new mongoose.Schema({
-  isSignedIn: {
-    type: Boolean,
-    required: true,
-  },
   name: {
     type: String,
     required: true,
@@ -31,8 +27,8 @@ const orderSchema = new mongoose.Schema({
     default: "pending",
   },
   orderTime: {
-    type: Date,
-    default: new Date().toDateString(),
+    type: String,
+    require: true,
   },
   bookedUserInfo: {
     name: {
