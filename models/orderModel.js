@@ -17,10 +17,15 @@ const orderSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  service: {
-    type: mongoose.Schema.Types.ObjectID,
-    ref: "services",
+  packageName: {
+    type: String,
+    required: true,
   },
+  price: {
+    type: String,
+    required: true,
+  },
+
   status: {
     type: String,
     default: "pending",
